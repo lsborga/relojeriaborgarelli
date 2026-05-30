@@ -136,7 +136,7 @@ a{color:inherit}
   font-family:var(--label);
   text-transform:uppercase;
   letter-spacing:.32em;
-  font-size:.72rem;
+  font-size:.82rem;
   font-weight:400;
   color:var(--brass);
   margin:0 0 1.4rem;
@@ -195,12 +195,13 @@ section{position:relative}
 .btn-primary:hover{background:var(--brass-bright);border-color:var(--brass-bright)}
 .btn-ghost{color:var(--brass);background:transparent}
 .btn-ghost:hover{background:rgba(194,160,90,.1);color:var(--brass-bright)}
-.nav-cta{
-  font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.74rem;font-weight:500;
+.nav-links a.nav-cta{
+  font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.74rem;font-weight:600;
   text-decoration:none;color:#120d06;background:var(--brass-bright);padding:.68rem 1.25rem;border-radius:2px;
   transition:background .3s,color .3s;white-space:nowrap;
 }
-.nav-cta:hover{background:#f0dcab;color:#0d0905}
+.nav-links a.nav-cta:hover{background:#f0dcab;color:#0d0905}
+.nav-links a.nav-cta::after{display:none}
 
 /* ---------- hero ---------- */
 .hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center}
@@ -215,14 +216,14 @@ section{position:relative}
   display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,5rem);
   align-items:center;width:100%;padding:clamp(5rem,8vw,7rem) 0;position:relative;z-index:2;
 }
-.hero h1{font-size:clamp(3rem,7.5vw,6rem);letter-spacing:-.02em;margin:.4rem 0 .2rem}
+.hero h1{font-size:clamp(3rem,7.5vw,6rem);letter-spacing:-.02em;margin:.4rem 0 .2rem;line-height:1.08;padding-bottom:.12em}
 .hero .title-line{
   font-family:var(--display);font-style:italic;font-weight:340;
   font-size:clamp(1.3rem,2vw,1.85rem);color:var(--brass-bright);margin-bottom:.5rem;
 }
 .cred{
   font-family:var(--label);text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;
-  color:var(--muted);margin:.2rem 0 1.8rem;border-left:1px solid var(--line);padding-left:1rem;
+  color:var(--muted);margin:.7rem 0 1.8rem;border-left:1px solid var(--line);padding-left:1rem;
 }
 .hero .lead{margin-bottom:2.2rem}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
@@ -257,13 +258,13 @@ section{position:relative}
 .ornament .diamond{width:8px;height:8px;background:var(--brass);transform:rotate(45deg)}
 
 /* ---------- about ---------- */
-.about-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
 .about-grid .lead{color:var(--ink-text)}
 .about-grid p{font-size:1.12rem}
 .diploma-wrap{display:flex;flex-direction:column;align-items:center;gap:1.1rem}
 .diploma-frame{
   position:relative;padding:14px;background:linear-gradient(145deg,#dcc085,#8a6c2f);
-  border-radius:3px;width:100%;max-width:440px;
+  border-radius:3px;width:100%;max-width:560px;
   box-shadow:0 26px 55px rgba(40,28,8,.34),inset 0 2px 0 rgba(255,255,255,.3),inset 0 -2px 4px rgba(60,40,10,.4);
 }
 .diploma-frame::after{content:"";position:absolute;inset:14px;border:1px solid rgba(60,40,10,.3);pointer-events:none;border-radius:1px}
@@ -281,14 +282,19 @@ section{position:relative}
 .svc{background:var(--ink-card);padding:2.3rem 2rem;transition:background .4s ease;position:relative}
 .svc:hover{background:#211b13}
 .svc .num{font-family:var(--label);font-size:.7rem;letter-spacing:.2em;color:var(--brass);opacity:.7}
-.svc h3{margin:1.1rem 0 .7rem;color:var(--cream)}
+.svc h3{margin:0 0 .7rem;color:var(--cream)}
 .svc p{color:var(--muted);font-size:1.02rem;margin:0}
 .svc-note{margin-top:2.4rem;font-family:var(--display);font-style:italic;font-size:1.3rem;color:var(--brass-bright);text-align:center}
+.svc-cta{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.6rem;text-decoration:none;background:rgba(194,160,90,.05)}
+.svc-cta:hover{background:rgba(194,160,90,.1)}
+.svc-cta .svc-cta-label{font-family:var(--display);font-style:italic;font-size:1.7rem;color:var(--brass-bright);line-height:1.1}
+.svc-cta .svc-cta-arrow{font-family:var(--display);font-size:1.5rem;color:var(--brass);transition:transform .35s ease}
+.svc-cta:hover .svc-cta-arrow{transform:translateX(8px)}
 
 /* ---------- process ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.6rem,3vw,3rem);margin-top:3.6rem;counter-reset:s}
 .step{position:relative;padding-top:2.2rem;border-top:1px solid var(--line)}
-.step .idx{font-family:var(--display);font-size:2.6rem;color:var(--brass);line-height:1;position:absolute;top:-.2rem;right:0;opacity:.85}
+.step .idx{font-family:var(--display);font-size:2.6rem;color:var(--brass);line-height:1;display:block;margin-bottom:1.1rem;opacity:.85}
 .step h3{margin-bottom:.8rem}
 .step p{color:var(--muted);font-size:1.03rem;margin:0}
 @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
@@ -306,7 +312,7 @@ section{position:relative}
 .gphoto{position:relative;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#0c0906;display:block}
 .gphoto img{width:100%;height:auto;display:block;transition:transform .6s ease}
 .gphoto:hover img{transform:scale(1.04)}
-.gphoto figcaption{font-family:var(--label);text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--muted);padding:.75rem .85rem;border-top:1px solid var(--line-soft)}
+.gphoto figcaption{font-family:var(--label);text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;color:var(--muted);padding:.85rem .95rem;border-top:1px solid var(--line-soft)}
 .tile{
   aspect-ratio:4/5;border:1px dashed var(--brass);border-radius:2px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;
@@ -349,8 +355,8 @@ section{position:relative}
 .channel .ico-circle svg{width:27px;height:27px;fill:var(--brass);transition:fill .35s ease}
 .channel:hover .ico-circle{background:var(--brass);border-color:var(--brass);transform:translateY(-5px);box-shadow:0 14px 30px rgba(194,160,90,.28)}
 .channel:hover .ico-circle svg{fill:#120d06}
-.channel .ch-name{font-family:var(--label);text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:var(--brass)}
-.channel .ch-val{font-size:.9rem;color:var(--muted);line-height:1.3;text-align:center;transition:color .3s}
+.channel .ch-name{font-family:var(--label);text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;color:var(--brass)}
+.channel .ch-val{font-size:1rem;color:var(--muted);line-height:1.3;text-align:center;transition:color .3s}
 .channel:hover .ch-val{color:var(--cream)}
 .contact .where{margin-top:2.2rem;color:var(--muted);font-size:1rem}
 .contact .where span{color:var(--brass)}
@@ -531,16 +537,17 @@ section{position:relative}
       <h2>Relojería antigua, de cualquier época</h2>
     </div>
     <div class="services reveal">
-      <div class="svc"><span class="num">01</span><h3>De pared, mesa y de pie</h3><p>Incluidos los relojes de pie de hasta dos o más metros de altura.</p></div>
-      <div class="svc"><span class="num">02</span><h3>Sonería y carrillón</h3><p>Mecanismos a péndulo con sonería simple o con carrillón.</p></div>
-      <div class="svc"><span class="num">03</span><h3>Péndulo de torsión · 400 días</h3><p>Los de cuerda anual que descansan bajo una campana de vidrio.</p></div>
-      <div class="svc"><span class="num">04</span><h3>Relojes Cu-Cú</h3><p>Restauración del mecanismo y de la caja. También fabrico los silbatos que dan el típico canto del cu-cú al sonar las horas.</p></div>
-      <div class="svc"><span class="num">05</span><h3>De bolsillo antiguos</h3><p>Piezas de bolsillo, siempre de época.</p></div>
-      <div class="svc"><span class="num">06</span><h3>Restauración de la caja</h3><p>Madera, porcelana con ornamentos y piezas de marfil devueltas a su esplendor.</p></div>
-      <div class="svc"><span class="num">07</span><h3>Relojes de gran porte</h3><p>Piezas monumentales y de torre, como el caso de un reloj de cuatro caras que funcionó en una estación de trenes en Londres.</p></div>
-      <div class="svc"><span class="num">08</span><h3>Cajas de Música de Colección</h3><p>Mecanismos de cilindro y peine —con sus campanas— restaurados y puestos nuevamente a sonar.</p></div>
+      <div class="svc"><h3>De pared, mesa y de pie</h3><p>Incluidos los relojes de pie de hasta dos o más metros de altura.</p></div>
+      <div class="svc"><h3>Sonería y carrillón</h3><p>Mecanismos a péndulo con sonería simple o con carrillón.</p></div>
+      <div class="svc"><h3>Péndulo de torsión · 400 días</h3><p>Los de cuerda anual que descansan bajo una campana de vidrio.</p></div>
+      <div class="svc"><h3>Relojes Cu-Cú</h3><p>Restauración del mecanismo y de la caja. También fabrico los silbatos que dan el típico canto del cu-cú al sonar las horas.</p></div>
+      <div class="svc"><h3>De bolsillo antiguos</h3><p>Piezas de bolsillo, siempre de época.</p></div>
+      <div class="svc"><h3>Restauración de la caja</h3><p>Madera, porcelana con ornamentos y piezas de marfil devueltas a su esplendor.</p></div>
+      <div class="svc"><h3>Relojes de gran porte</h3><p>Piezas monumentales y de torre, como el caso de un reloj de cuatro caras que funcionó en una estación de trenes en Londres.</p></div>
+      <div class="svc"><h3>Cajas de Música de Colección</h3><p>Mecanismos de cilindro y peine —con sus campanas— restaurados y puestos nuevamente a sonar.</p></div>
+      <a class="svc svc-cta" href="#galeria"><span class="svc-cta-label">Ver galería</span><span class="svc-cta-arrow" aria-hidden="true">→</span></a>
     </div>
-    <p class="svc-note reveal">Cualquier tipo. Cualquier marca.</p>
+    <p class="svc-note reveal">«Cualquier tipo. Cualquier marca.»</p>
   </div>
 </section>
 
