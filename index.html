@@ -135,8 +135,8 @@ a{color:inherit}
 .eyebrow{
   font-family:var(--label);
   text-transform:uppercase;
-  letter-spacing:.32em;
-  font-size:.82rem;
+  letter-spacing:.28em;
+  font-size:.95rem;
   font-weight:400;
   color:var(--brass);
   margin:0 0 1.4rem;
@@ -144,7 +144,7 @@ a{color:inherit}
 }
 .sec--light .eyebrow{color:var(--brass-deep)}
 h1,h2,h3{font-family:var(--display);font-weight:380;line-height:1.04;margin:0}
-h2{font-size:clamp(2.1rem,3.4vw,3.4rem);letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,3.4vw,3.4rem);letter-spacing:-.01em;text-wrap:balance;text-indent:0}
 h3{font-size:1.35rem;font-weight:420;letter-spacing:.005em}
 .lead{font-size:clamp(1.15rem,1.1vw + .9rem,1.35rem);color:var(--cream);max-width:54ch}
 p{margin:0 0 1.1rem}
@@ -260,6 +260,9 @@ section{position:relative}
 /* ---------- about ---------- */
 .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
 .about-grid .lead{color:var(--ink-text)}
+.oficio-quote{margin:1.8rem 0 0;padding:.1rem 0 .1rem 1.6rem;border-left:2px solid var(--brass-deep);font-family:var(--display);font-style:italic;font-size:clamp(1.18rem,1.2vw,1.4rem);line-height:1.55;color:var(--ink-text)}
+.oficio-quote p{margin:0 0 1rem}
+.oficio-quote p:last-child{margin:0}
 .about-grid p{font-size:1.12rem}
 .diploma-wrap{display:flex;flex-direction:column;align-items:center;gap:1.1rem}
 .diploma-frame{
@@ -312,7 +315,7 @@ section{position:relative}
 .gphoto{position:relative;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#0c0906;display:block}
 .gphoto img{width:100%;height:auto;display:block;transition:transform .6s ease}
 .gphoto:hover img{transform:scale(1.04)}
-.gphoto figcaption{font-family:var(--label);text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;color:var(--muted);padding:.85rem .95rem;border-top:1px solid var(--line-soft)}
+.gphoto figcaption{font-family:var(--label);text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;color:var(--muted);padding:.9rem 1rem;border-top:1px solid var(--line-soft)}
 .tile{
   aspect-ratio:4/5;border:1px dashed var(--brass);border-radius:2px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;
@@ -346,7 +349,7 @@ section{position:relative}
 }
 .email-box:hover{color:var(--cream);border-color:var(--cream)}
 .channels{display:flex;gap:1.8rem;justify-content:center;flex-wrap:wrap;margin-top:.4rem}
-.channel{display:flex;flex-direction:column;align-items:center;gap:.7rem;text-decoration:none;color:var(--cream);width:140px}
+.channel{display:flex;flex-direction:column;align-items:center;gap:.7rem;text-decoration:none;color:var(--cream);width:155px}
 .channel .ico-circle{
   width:66px;height:66px;border-radius:50%;border:1px solid var(--brass);
   display:flex;align-items:center;justify-content:center;background:rgba(194,160,90,.06);
@@ -355,10 +358,10 @@ section{position:relative}
 .channel .ico-circle svg{width:27px;height:27px;fill:var(--brass);transition:fill .35s ease}
 .channel:hover .ico-circle{background:var(--brass);border-color:var(--brass);transform:translateY(-5px);box-shadow:0 14px 30px rgba(194,160,90,.28)}
 .channel:hover .ico-circle svg{fill:#120d06}
-.channel .ch-name{font-family:var(--label);text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;color:var(--brass)}
-.channel .ch-val{font-size:1rem;color:var(--muted);line-height:1.3;text-align:center;transition:color .3s}
+.channel .ch-name{font-family:var(--label);text-transform:uppercase;letter-spacing:.16em;font-size:.85rem;color:var(--brass)}
+.channel .ch-val{font-size:1.08rem;color:var(--muted);line-height:1.3;text-align:center;transition:color .3s}
 .channel:hover .ch-val{color:var(--cream)}
-.contact .where{margin-top:2.2rem;color:var(--muted);font-size:1rem}
+.contact .where{margin-top:2.2rem;color:var(--muted);font-size:1.08rem}
 .contact .where span{color:var(--brass)}
 
 /* ---------- footer ---------- */
@@ -512,8 +515,10 @@ section{position:relative}
     <div>
       <span class="eyebrow">El oficio</span>
       <h2>Un aprendizaje que empezó a los catorce años</h2>
-      <p class="lead" style="margin-top:1.6rem">Empecé como aprendiz a los catorce. A los veintiséis, con un vasto conocimiento del rubro, me diplomé como Técnico Relojero Cronometrista en la 1.ª Escuela Suiza de Relojería, en 1977.</p>
-      <p>Desde entonces, mi trabajo nunca se limitó a la maquinaria. Cada reloj antiguo es también un objeto con historia: la caja de madera, la porcelana ornamentada, los detalles que lo vuelven irrepetible. Todo eso lo restauro y lo conservo con el mismo cuidado que el mecanismo que lleva adentro.</p>
+      <blockquote class="oficio-quote">
+        <p>“Empecé como aprendiz a los catorce. A los veintiséis, con un vasto conocimiento del rubro, me diplomé como Técnico Relojero Cronometrista en la 1.ª Escuela Suiza de Relojería, en 1977.</p>
+        <p>Desde entonces, mi trabajo nunca se limitó a la maquinaria. Cada reloj antiguo es también un objeto con historia: la caja de madera, la porcelana ornamentada, los detalles que lo vuelven irrepetible. Todo eso lo restauro y lo conservo con el mismo cuidado que el mecanismo que lleva adentro.”</p>
+      </blockquote>
       <div class="stats">
         <div class="stat"><span class="n">1977</span><span class="t">Año de mi diploma</span></div>
         <div class="stat"><span class="n">14</span><span class="t">Años al empezar</span></div>
@@ -547,7 +552,7 @@ section{position:relative}
       <div class="svc"><h3>Cajas de Música de Colección</h3><p>Mecanismos de cilindro y peine —con sus campanas— restaurados y puestos nuevamente a sonar.</p></div>
       <a class="svc svc-cta" href="#galeria"><span class="svc-cta-label">Ver galería</span><span class="svc-cta-arrow" aria-hidden="true">→</span></a>
     </div>
-    <p class="svc-note reveal">«Cualquier tipo. Cualquier marca.»</p>
+    <p class="svc-note reveal">Cualquier tipo. Cualquier marca.</p>
   </div>
 </section>
 
