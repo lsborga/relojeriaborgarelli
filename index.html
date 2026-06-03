@@ -311,8 +311,9 @@ section{position:relative}
 @media(max-width:760px){.coverage{grid-template-columns:1fr}.coverage .big{white-space:normal}}
 
 /* ---------- gallery ---------- */
-.gallery{columns:3 240px;column-gap:1.2rem;margin-top:3.4rem}
-.gphoto,.tile{break-inside:avoid;margin:0 0 1.2rem;width:100%}
+.gallery{display:flex;gap:1.2rem;align-items:flex-start;margin-top:3.4rem}
+.gcol{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:1.2rem}
+.gphoto,.tile{width:100%}
 .gphoto{position:relative;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#0c0906;display:block}
 .gphoto img{width:100%;height:auto;display:block;transition:transform .6s ease}
 .gphoto:hover img{transform:scale(1.04)}
@@ -589,21 +590,21 @@ section{position:relative}
       <h2>El trabajo habla por sí solo</h2>
     </div>
     <div class="gallery reveal">
-      <figure class="gphoto"><img src="notre-dame-reims.jpg" alt="Reloj montado en una réplica a escala de la fachada oeste de la Catedral de Notre-Dame de Reims (Francia), revestida en dorado a la hoja" loading="lazy"><figcaption>Réplica de la fachada oeste de Notre-Dame de Reims · dorado a la hoja</figcaption></figure>
-      <figure class="gphoto"><img src="Pieza%20de%201685%20con%20columnas%20de%20marfil.jpeg" alt="Reloj bracket de 1685 en ébano con columnas torsas de marfil y aplicaciones de bronce y plata" loading="lazy"><figcaption>Pieza de 1685 con columnas de marfil</figcaption></figure>
-      <figure class="gphoto"><img src="Reloj%20Merra%20-%20aproximadamente%20de%201750.jpeg" alt="Reloj de bronce dorado, aproximadamente de 1750, firma Merra, con figura femenina" loading="lazy"><figcaption>Reloj Merra — aproximadamente de 1750</figcaption></figure>
-      <figure class="gphoto"><img src="Reloj%20con%20soner%C3%ADa.%20Figura%20con%20dorado%20a%20la%20hoja.jpeg" alt="Reloj con sonería y figura de estilo chinesco revestida en dorado a la hoja" loading="lazy"><figcaption>Reloj con sonería · figura con dorado a la hoja</figcaption></figure>
-      <figure class="gphoto"><img src="reloj-cuatro-caras.jpg" alt="Reloj antiguo de cuatro caras firmado P. Levère, restaurado" loading="lazy"><figcaption>Reloj de cuatro caras · firma P. Levère</figcaption></figure>
-      <figure class="gphoto"><img src="restauracion-taller.jpg" alt="Mario Pedro Borgarelli restaurando un reloj de cuatro caras en su taller" loading="lazy"><figcaption>Restauración en el taller</figcaption></figure>
-      <figure class="gphoto"><img src="reloj-400-dias.jpg" alt="Reloj de aniversario de 400 días con péndulo de torsión y cúpula de vidrio, en latón dorado" loading="lazy"><figcaption>Reloj de 400 días · péndulo de torsión</figcaption></figure>
-      <figure class="gphoto"><img src="caja-de-musica.jpg" alt="Caja de música de colección, de cilindro con campanas, restaurada en el taller" loading="lazy"><figcaption>Caja de música de colección · mecanismo de cilindro y campanas</figcaption></figure>
-      <figure class="gphoto"><img src="TRABAJO%20EN%20LA%20CAJA%20-%20antes%20de%20restaurar.jpeg" alt="Caja de reloj de pared antes de restaurar" loading="lazy"><figcaption>Trabajo en la caja — antes de restaurar</figcaption></figure>
-      <figure class="gphoto"><img src="TRABAJO%20EN%20LA%20CAJA%20-%20despu%C3%A9s%20de%20restaurar.jpeg" alt="Caja de reloj de pared después de restaurar" loading="lazy"><figcaption>Trabajo en la caja — después de restaurar</figcaption></figure>
-      <figure class="gphoto"><video controls playsinline preload="metadata" poster="reloj-en-marcha-poster.jpg" style="width:100%;height:auto;display:block;background:#0c0906"><source src="reloj-en-marcha.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="reloj-en-marcha.mp4">Descargalo acá</a>.</video><figcaption>El reloj en marcha</figcaption></figure>
-      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-reloj-pie-1.jpg" style="width:100%;height:auto;display:block;background:#0c0906"><source src="Reloj%20de%20pie%20video%201.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Reloj%20de%20pie%20video%201.mp4">Descargalo acá</a>.</video><figcaption>Reloj de pie · video 1</figcaption></figure>
-      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-reloj-pie-2.jpg" style="width:100%;height:auto;display:block;background:#0c0906"><source src="Reloj%20de%20pie%20video%202.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Reloj%20de%20pie%20video%202.mp4">Descargalo acá</a>.</video><figcaption>Reloj de pie · video 2</figcaption></figure>
-      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-reloj-paris.jpg" style="width:100%;height:auto;display:block;background:#0c0906"><source src="Reloj%20Par%C3%ADs%20con%20p%C3%A9ndulo%20compensado%20con%20mercurio.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Reloj%20Par%C3%ADs%20con%20p%C3%A9ndulo%20compensado%20con%20mercurio.mp4">Descargalo acá</a>.</video><figcaption>Reloj París · péndulo compensado con mercurio</figcaption></figure>
-      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-trabajo-terminado.jpg" style="width:100%;height:auto;display:block;background:#0c0906"><source src="Trabajo%20terminado.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Trabajo%20terminado.mp4">Descargalo acá</a>.</video><figcaption>Trabajo terminado</figcaption></figure>
+      <figure class="gphoto"><img src="notre-dame-reims.jpg" alt="Reloj montado en una réplica a escala de la fachada oeste de la Catedral de Notre-Dame de Reims (Francia), revestida en dorado a la hoja" loading="lazy" data-ar="2.11" style="aspect-ratio:489/1032"><figcaption>Réplica de la fachada oeste de Notre-Dame de Reims · dorado a la hoja</figcaption></figure>
+      <figure class="gphoto"><img src="Pieza%20de%201685%20con%20columnas%20de%20marfil.jpeg" alt="Reloj bracket de 1685 en ébano con columnas torsas de marfil y aplicaciones de bronce y plata" loading="lazy" data-ar="2.111" style="aspect-ratio:758/1600"><figcaption>Pieza de 1685 con columnas de marfil</figcaption></figure>
+      <figure class="gphoto"><img src="Reloj%20Merra%20-%20aproximadamente%20de%201750.jpeg" alt="Reloj de bronce dorado, aproximadamente de 1750, firma Merra, con figura femenina" loading="lazy" data-ar="1.631" style="aspect-ratio:918/1497"><figcaption>Reloj Merra — aproximadamente de 1750</figcaption></figure>
+      <figure class="gphoto"><img src="Reloj%20con%20soner%C3%ADa.%20Figura%20con%20dorado%20a%20la%20hoja.jpeg" alt="Reloj con sonería y figura de estilo chinesco revestida en dorado a la hoja" loading="lazy" data-ar="1.333" style="aspect-ratio:1200/1600"><figcaption>Reloj con sonería · figura con dorado a la hoja</figcaption></figure>
+      <figure class="gphoto"><img src="reloj-cuatro-caras.jpg" alt="Reloj antiguo de cuatro caras firmado P. Levère, restaurado" loading="lazy" data-ar="0.563" style="aspect-ratio:1100/619"><figcaption>Reloj de cuatro caras · firma P. Levère</figcaption></figure>
+      <figure class="gphoto"><img src="restauracion-taller.jpg" alt="Mario Pedro Borgarelli restaurando un reloj de cuatro caras en su taller" loading="lazy" data-ar="0.563" style="aspect-ratio:1100/619"><figcaption>Restauración en el taller</figcaption></figure>
+      <figure class="gphoto"><img src="reloj-400-dias.jpg" alt="Reloj de aniversario de 400 días con péndulo de torsión y cúpula de vidrio, en latón dorado" loading="lazy" data-ar="1.66" style="aspect-ratio:482/800"><figcaption>Reloj de 400 días · péndulo de torsión</figcaption></figure>
+      <figure class="gphoto"><img src="caja-de-musica.jpg" alt="Caja de música de colección, de cilindro con campanas, restaurada en el taller" loading="lazy" data-ar="1.333" style="aspect-ratio:504/672"><figcaption>Caja de música de colección · mecanismo de cilindro y campanas</figcaption></figure>
+      <figure class="gphoto"><img src="TRABAJO%20EN%20LA%20CAJA%20-%20antes%20de%20restaurar.jpeg" alt="Caja de reloj de pared antes de restaurar" loading="lazy" data-ar="1.333" style="aspect-ratio:960/1280"><figcaption>Trabajo en la caja — antes de restaurar</figcaption></figure>
+      <figure class="gphoto"><img src="TRABAJO%20EN%20LA%20CAJA%20-%20despu%C3%A9s%20de%20restaurar.jpeg" alt="Caja de reloj de pared después de restaurar" loading="lazy" data-ar="1.333" style="aspect-ratio:960/1280"><figcaption>Trabajo en la caja — después de restaurar</figcaption></figure>
+      <figure class="gphoto"><video controls playsinline preload="metadata" poster="reloj-en-marcha-poster.jpg" data-ar="1.818" style="aspect-ratio:352/640;width:100%;height:auto;display:block;background:#0c0906"><source src="reloj-en-marcha.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="reloj-en-marcha.mp4">Descargalo acá</a>.</video><figcaption>El reloj en marcha</figcaption></figure>
+      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-reloj-pie-1.jpg" data-ar="1.778" style="aspect-ratio:720/1280;width:100%;height:auto;display:block;background:#0c0906"><source src="Reloj%20de%20pie%20video%201.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Reloj%20de%20pie%20video%201.mp4">Descargalo acá</a>.</video><figcaption>Reloj de pie · las tres pesas en marcha</figcaption></figure>
+      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-reloj-pie-2.jpg" data-ar="1.8" style="aspect-ratio:720/1296;width:100%;height:auto;display:block;background:#0c0906"><source src="Reloj%20de%20pie%20video%202.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Reloj%20de%20pie%20video%202.mp4">Descargalo acá</a>.</video><figcaption>Reloj de pie · esfera de 24 horas</figcaption></figure>
+      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-reloj-paris.jpg" data-ar="1.778" style="aspect-ratio:720/1280;width:100%;height:auto;display:block;background:#0c0906"><source src="Reloj%20Par%C3%ADs%20con%20p%C3%A9ndulo%20compensado%20con%20mercurio.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Reloj%20Par%C3%ADs%20con%20p%C3%A9ndulo%20compensado%20con%20mercurio.mp4">Descargalo acá</a>.</video><figcaption>Reloj París · péndulo compensado con mercurio</figcaption></figure>
+      <figure class="gphoto"><video controls playsinline preload="metadata" poster="poster-trabajo-terminado.jpg" data-ar="1.778" style="aspect-ratio:720/1280;width:100%;height:auto;display:block;background:#0c0906"><source src="Trabajo%20terminado.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="Trabajo%20terminado.mp4">Descargalo acá</a>.</video><figcaption>Trabajo terminado</figcaption></figure>
     </div>
     <p class="ph-note reveal">◇ Más fotos próximamente</p>
   </div>
@@ -672,6 +673,32 @@ const io=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
 },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var gallery=document.querySelector('.gallery');
+  if(!gallery) return;
+  var items=Array.prototype.slice.call(gallery.querySelectorAll('.gphoto'));
+  function colCount(){var w=window.innerWidth;return w<560?1:(w<920?2:3);}
+  var laid=0;
+  function layout(){
+    var n=colCount();
+    if(n===laid) return;
+    laid=n;
+    gallery.textContent='';
+    var cols=[],heights=[];
+    for(var i=0;i<n;i++){var c=document.createElement('div');c.className='gcol';gallery.appendChild(c);cols.push(c);heights.push(0);}
+    items.forEach(function(it){
+      var m=0;for(var i=1;i<n;i++){if(heights[i]<heights[m])m=i;}
+      cols[m].appendChild(it);
+      var media=it.querySelector('img,video');
+      var ar=media?parseFloat(media.getAttribute('data-ar')):1;
+      heights[m]+=(ar||1)+0.22;
+    });
+  }
+  layout();
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(layout,150);});
+})();
 </script>
 </body>
 </html>
