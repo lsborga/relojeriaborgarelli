@@ -668,11 +668,16 @@ const nav=document.getElementById('nav');
 const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
 onScroll();window.addEventListener('scroll',onScroll,{passive:true});
 
-// reveal on scroll
-const io=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// reveal on scroll — threshold:0 so very tall elements (the gallery on mobile) also reveal
+const reveals=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:0,rootMargin:'0px 0px -8% 0px'});
+  reveals.forEach(el=>io.observe(el));
+}else{
+  reveals.forEach(el=>el.classList.add('in'));
+}
 </script>
 <script>
 (function(){
